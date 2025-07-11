@@ -37,7 +37,7 @@ const Formulario = () => {
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8">
         <h2 className="text-2xl font-bold text-center mb-6">
-          ¿Listo para comenzar tu plan de retiro?
+          Agenda tu cita gratis
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
