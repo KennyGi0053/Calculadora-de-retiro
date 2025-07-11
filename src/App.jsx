@@ -2,6 +2,8 @@ import './App.css'
 import Navbar from '../components/Navbar'
 import Calculadora from '../components/Calculadora'
 import Formulario from '../components/Formulario'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 function App() {
 
 
@@ -10,6 +12,7 @@ function App() {
   <Navbar/>  
   <Calculadora/>
   <Formulario/>
+  <ToastContainer position="top-center" autoClose={3000} />
   </div>
   )
 }

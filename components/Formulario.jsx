@@ -3,9 +3,11 @@ import calendar from "../src/assets/calendar.png"
 import mail from "../src/assets/mail.png"
 import phone from "../src/assets/phone.png"
 import { useState } from "react"
-const Formulario = () => {
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
-    const [form, setForm] = useState({
+const Formulario = () => {
+  const [form, setForm] = useState({
     nombre: '',
     fechaNacimiento: '',
     telefono: '',
@@ -20,9 +22,17 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Formulario enviado:', form)
-    // Aquí puedes agregar lógica para enviar a un backend o EmailJS
+
+    toast.success("¡Información enviada con éxito!")
+
+    setForm({
+      nombre: '',
+      fechaNacimiento: '',
+      telefono: '',
+      correo: '',
+    })
   }
-    
+
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8">
@@ -101,12 +111,15 @@ const Formulario = () => {
           {/* Botón */}
           <button
             type="submit"
-            className="w-full bg-violet-900 text-white font-bold py-2 rounded hover:bg-red-700 mt-4"
+            className="w-full bg-violet-900 text-white font-bold py-2 rounded hover:bg-red-700 mt-4 cursor-pointer"
           >
             Enviar información
           </button>
         </form>
       </div>
+
+      {/* Aquí va el Toast */}
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   )
 }

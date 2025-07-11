@@ -1,4 +1,5 @@
 import { useState } from "react"
+
 const Calculadora = () => {
 
   const [form, setForm] = useState({
@@ -105,7 +106,7 @@ const Calculadora = () => {
         </div>
       </div>
 
-      <button onClick={calcularRetiro} className="w-full bg-violet-900 text-white font-bold py-2 rounded hover:bg-red-700">
+      <button onClick={calcularRetiro} className="w-full bg-violet-900 text-white font-bold py-2 rounded hover:bg-red-700 cursor-pointer">
         Calcular
       </button>
 
@@ -120,7 +121,6 @@ const Calculadora = () => {
         </div>
       )}
     </div>
-        
     </div>
   )
 }
